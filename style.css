@@ -73,7 +73,7 @@ html
             /* flex: 1 1 0; */
             padding: 15px;
             /* padding-top: 30px; */
-            color: #ff878d;
+            color: #F38C10;
             font-size: 16px;
             font-weight: 600;
             letter-spacing: 0.12em;
@@ -87,9 +87,9 @@ html
             padding-left: 110px; */
             font-size: 27px;
             /* background: #ff878d; */
-            color: #3E1F92;
+            color: #16317C;
             width: 62.8%;
-            background: #ff878d;
+            background: #F38C10;
         }
         #special span
         {
@@ -101,7 +101,7 @@ html
         {
             content: "";
             position: absolute;
-            background-color:#ff878d ;
+            background-color:#F38C10 ;
             height: 4px;
             width: 0;
             left: 0;
@@ -126,7 +126,7 @@ html
 
 .wrapperone
 {
-    background: #ff878d;
+    background: #F38C10;
 }
 
 .wrapperone h3
@@ -140,7 +140,7 @@ html
 
 .wrapperone h1
 {
-    color: #3E1F92;
+    color: #16317C;
     font-size: 3.5em;
     text-align: center;
     animation: wholebox 2s forwards;
@@ -157,7 +157,7 @@ html
 }
 
 .wrapperone div{
-    background: #3E1F92;
+    background: #16317C;
     width: 170px;
     height: 60px;
     /* border-radius: 50%; */
@@ -180,7 +180,7 @@ html
 {
     grid-row-start: 1;
     grid-row-end: 2;
-    background: #3E1F92;
+    background: #16317C;
     justify-self: center;
     align-self: end;
     border-radius: 27px;
@@ -201,7 +201,7 @@ html
     list-style-type: none;
     display: inline-block;
     padding:17px;
-    color: #3E1F92;
+    color: #16317C;
     margin-top: 30px;
     animation: wholebox 2s forwards;
 }
@@ -229,71 +229,83 @@ html
 .second
 {
     width: 100%;
-    height: 80vh;
-    /* background: hsl(180, 100%, 25%); */
-    display: grid;
-    grid-template-columns:62.7% 37.3%;
+    height: 100vh;
     overflow: hidden;
+    /* background: pink; */
+    overflow: hidden;
+}
+
+
+.secondd
+{
+  /* background: plum; */
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns:62.8% 37.2%;
+
 }
 
 .second1
 {
-    /* background: sienna; */
+    /* background: purple; */
     text-align: left;
-    justify-self: center;
-    align-self: center;
-    font-size: 1.1em;
-    line-height: 1.6em;
-    padding: 75px;
+    line-height: 1.7em;
+    /* margin-top: 20vh; */
+    margin: 15vh;
+    overflow: hidden;
+}
+
+.second1 h1
+{
+    padding: 30px;
+    text-align: center;
+    padding-top: 100px;
 }
 
 .second1 .button
 {
-    background: #ff878d;
-    width: 170px;
     height: 60px;
-    color: white;
-    margin-top: 25px;
+    width: 170px;
+    background: #F38C10;
     text-align: center;
-    padding-top: 15px;
+    padding: 15px;
+    margin:20px;
+    margin-left: 0;
 }
 
 .second2
 {
-    background: #3E1F92;
-    /* justify-self: center;
-    align-self: center; */
+    background: #16317C;
+    /* background: url(https://wallpaperaccess.com/full/133891.jpg); */
+ 
 }
 
-
-
-
-
-
-
-/* Third---Skills */
-
-.third
+.second21
 {
-    background: tomato;
-    height: 100vh;
-}
-.third h1
-{
-    color:#008080;
-    text-shadow: 10px 10px 15px gray;
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 45px;
-    /* margin-top: 20px; */
-    /* text-decoration: underline; */
-    letter-spacing: 2px;
+    height: 92%;
+    width: 92%;
+    margin:22px;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    grid-gap:25px;
+    overflow: hidden;
 }
 
-.third h1 span
+.second21 .one
 {
-    color: black;
+    background: #F38C10;
+    border-radius: 25px;
 }
+
+.second21 .two
+{
+    background: #F38C10;
+    border-radius: 25px;
+}
+
 
 /* projects */
 
@@ -301,14 +313,136 @@ html
 {
     height: 100vh;
     width: 100%;
-    background: darkgoldenrod;
+    /* background: url(https://wallpaperaccess.com/full/133891.jpg); */
+    color: white;
+    background: #F38C10;
 }
+
+.project h1
+{
+    color: #16317C;
+    padding: 15px;
+    text-align: center;
+    size: 2em;
+}
+
+.projectt
+{
+    width: 90%;
+    height: 70%;
+    /* background: darkgreen; */
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:35px;
+    overflow: hidden;
+    margin-top: 3%;
+}
+
+.project1
+{
+    /* background: #16317C; */
+    background: url(https://wallpaperaccess.com/full/133891.jpg);
+    border-radius: 25px;
+    overflow: hidden;
+    width: 90%;
+}
+
+.project11
+{
+    width: 100%;
+    height: 50%;
+    background: url(https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmV0ZmxpeHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80) no-repeat;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.project11:hover,
+.project21:hover,
+.project31:hover
+{
+    transform: scale(1.12);
+}
+
+.project12
+{
+    text-align: center;
+    transition: transform 500ms ease;
+    /* background: url(https://wallpaperaccess.com/full/133891.jpg); */
+}
+
+.project12 p
+{
+    line-height: 1.6;
+    color: white;
+}
+
+.project12 button
+{
+    background:#F38C10;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    width: 150px;
+    height: 60px;
+}
+
+.project2
+{
+    background: url(https://wallpaperaccess.com/full/133891.jpg);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 90%;
+}
+
+.project21
+{
+    width: 100%;
+    height: 50%;
+    background:url(Employee\ Payroll.png) no-repeat;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.project22
+{
+    
+    width: 100%;
+    height: 50%;
+}
+
+.project3
+{
+    background: url(https://wallpaperaccess.com/full/133891.jpg);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 90%;
+}
+
+.project31
+{
+    height: 50%;
+    width: 100%;
+    background:url(https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.project32
+{
+    width: 100%;
+    height: 50%;
+}
+
 
 /* work */
 
 .work
 {
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     /* background: red; */
     overflow: hidden;
@@ -318,6 +452,7 @@ html
 {
     text-align: center;
     padding-top: 15px;
+    color: #16317C;
 }
 
 .work1
@@ -337,19 +472,30 @@ html
 
 .work111
 {
-    height: 90%;
+    height: 75%;
     width: 60%;
-    background: seagreen;
+    /* background: seagreen; */
     margin:0 auto;
+    margin-top: 75px;
     border-radius: 10px;
-    color: gold;
-    background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y29tcHV0ZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
-    padding: 18rem 0 0;
-    line-height: 2.6;
+    color: #16317C;
+    font-style: bold;
+    background-image: url(https://wallpaperaccess.com/full/133891.jpg);
+    padding: 17rem 0 0;
+    line-height: 2.2;
     /* max-width: 35ch; */
     overflow: hidden;
     transition: transform 500ms ease;
 }
+
+.work111-body
+{
+    color: white;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
 
 .work111:hover
 {
@@ -397,7 +543,7 @@ html
     position: absolute;
     height: 4px;
     width: calc(100% + var(--padding));
-    background: green;
+    background: #16317C;
     left:calc(var(--padding)*-1) ;
     bottom: 0;
     transform-origin: left;
@@ -413,30 +559,26 @@ html
 .work111-content .button
 {
     text-decoration: none;
-    background: pink;
+    background: #F38C10;
     color: white;
     padding: 10px;
+    margin-top: 15px;
 }
 
 .work111-content .button:hover,
 .work111-content .button:focus
 {
-    background: peachpuff;
+    background: #ec9934;
 }
 
-/* .work12
-{
-    background: brown;
-} */
-
-.work122
+/* .work122
 {
     height: 90%;
     width: 60%;
     background: seagreen;
     margin:0 auto;
     border-radius: 10px;
-}
+} */
 
 /* contact */
 
@@ -446,12 +588,12 @@ html
     width: 100%;
     overflow: hidden;
     color: white;
-    background: #ff878d;
+    background: #F38C10;
 }
 
 .contactt
 {
-    background: #3E1F92;
+    background: #16317C;
     height: 94vh;
     width: 98%;
     margin: 3vh auto;
@@ -488,14 +630,14 @@ html
 
 .contact1 li div:hover
 {
-    background: #ff878d;
+    background: url(https://wallpaperaccess.com/full/133891.jpg);
 }
 
 .contact2
 {
     height: 60vh;
     width: 35%;
-    background: white;
+    background: url(https://wallpaperaccess.com/full/133891.jpg);
     margin:5vh auto;
     border-radius: 12px;
     animation: wholebox 2s forwards;
@@ -543,7 +685,7 @@ input
     height: 60px;
     margin-top: 20px;
     margin-left: 180px;
-    background: #ff878d;
+    background: #F38C10;
     color: white;
     border-radius: 12px;
     border: none;
@@ -560,7 +702,7 @@ input
     width: 100%;
     height: 100vh;
     z-index: 100;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;

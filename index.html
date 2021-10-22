@@ -15,7 +15,51 @@
 
    <div class="loader">
        <span>
-           Srishti
+        <svg width="57" height="57" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+            <g fill="#F38C10" fill-rule="evenodd">
+                <g transform="translate(1 1)" stroke-width="2">
+                    <circle cx="5" cy="50" r="5">
+                        <animate attributeName="cy"
+                             begin="0s" dur="2.2s"
+                             values="50;5;50;50"
+                             calcMode="linear"
+                             repeatCount="indefinite" />
+                        <animate attributeName="cx"
+                             begin="0s" dur="2.2s"
+                             values="5;27;49;5"
+                             calcMode="linear"
+                             repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="27" cy="5" r="5">
+                        <animate attributeName="cy"
+                             begin="0s" dur="2.2s"
+                             from="5" to="5"
+                             values="5;50;50;5"
+                             calcMode="linear"
+                             repeatCount="indefinite" />
+                        <animate attributeName="cx"
+                             begin="0s" dur="2.2s"
+                             from="27" to="27"
+                             values="27;49;5;27"
+                             calcMode="linear"
+                             repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="49" cy="50" r="5">
+                        <animate attributeName="cy"
+                             begin="0s" dur="2.2s"
+                             values="50;50;5;50"
+                             calcMode="linear"
+                             repeatCount="indefinite" />
+                        <animate attributeName="cx"
+                             from="49" to="49"
+                             begin="0s" dur="2.2s"
+                             values="49;5;27;49"
+                             calcMode="linear"
+                             repeatCount="indefinite" />
+                    </circle>
+                </g>
+            </g>
+        </svg>
        </span>
    </div>
 <div id="root">
@@ -63,7 +107,9 @@
     <!-- second part(detailed Intro) -->
     <div class="second">
         <!-- <h1>About Me!</h1> -->
+        <div class="secondd">
             <div class="second1">
+                <h1>About Me</h1>
                 Hi, I am Srishti. I am a final year student pursuing bachelor of technology in Information Science and Engineering.
                 With prior experience of few internships as web developer I am an aspiring software developer with holistic knowledge of software development and design. I am mainly
                 experienced in front-end web development with latest technologies like ES6 and ReactJS.<br>
@@ -72,22 +118,56 @@
                  <div class="button">Contact Me.</div>
             </div>
             <div class="second2">
+                <!-- <div class="second21">
+                    
+                    <div class="cpp one"></div>
+                    <div class="javas two"></div>
+                    <div class="html two"></div>
+                    <div class="css one"></div>
+                    <div class="bootstrap one"></div>
+                    <div class="dsalgo two"></div>
+                    <div class="sql two"></div>
+                    <div class="oops one"></div>
                 
-            </div>
-    </div>
+                    
+                </div> -->
 
-    <!-- Third--Skills -->
-    <div class="third">
-        <h1><span>M</span>y <span>S</span>kills</h1>
-        <div class="skills">
-            
+            </div>
         </div>
     </div>
 
     <!-- Project -->
+
     <div class="project">
-        <h1>projects</h1>
+        <h1>My Projects</h1>
+
+        <div class="projectt">
+            <div class="project1">
+                <div class="project11"></div>
+                <div class="project12"><h1>Netflix Landing Page</h1>
+                    <p>It is a clone of the original Netflix landing page.A reponsive application made with HTML, Vanilla CSS and Javascript.</p>
+                <button>Visit link</button></div>
+            </div>
+            <div class="project2">
+                <div class="project21"></div>
+                <div class="project22 project12">
+                    <h1>Netflix Landing Page</h1>
+                    <p>It is a clone of the original Netflix landing page.A reponsive application made with HTML, Vanilla CSS and Javascript.</p>
+                <button>Visit link</button>
+                </div>
+            </div>
+            <div class="project3">
+                <div class="project31"></div>
+                <div class="project32 project12">
+                    <h1>Netflix Landing Page</h1>
+                    <p>It is a clone of the original Netflix landing page.A reponsive application made with HTML, Vanilla CSS and Javascript.</p>
+                <button>Visit link</button>
+                </div>
+            </div>
+        </div>
+
     </div>
+    
 
     <!-- work -->
     <div class="work">
@@ -97,13 +177,19 @@
                 <div class="work111">
                     <div class="work111-content">
                         <h2 class="work111-title">Technocolabs Software</h2>
-                        <p class="wrap111-body">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p class="work111-body">Worked as a software development intern. Made a B2B ecommerce website.</p>
                         <a href="#" class="button">See Credentials</a>
                     </div>
                 </div>
             </div>
             <div class="work12">
-                <div class="work122"></div>
+                <div class="work122 work111">
+                    <div class="work122-content work111-content">
+                        <h2 class="work122-title work111-title">The Sparks Foundation</h2>
+                        <p class="work122-body work111-body">Worked as a software development intern. Made a bank transaction management system.</p>
+                        <a href="#" class="button">See Credentials</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
