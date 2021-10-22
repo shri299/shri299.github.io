@@ -34,70 +34,66 @@ html
 
 .first
 {
-    /* height: 100vh; */
-    background: white;
-    /* overflow: hidden; */
-    /* background: url(https://media.istockphoto.com/photos/dark-blue-stained-grungy-background-or-texture-picture-id1132593892?k=20&m=1132593892&s=612x612&w=0&h=dMVA_OoY01ef2jUR223F4M0vFA4HRZ8i44q9TMZGHcQ=); */
-    /* position: relative; */
-    
+    height: 100vh; 
+    display: grid;
+    grid-template-columns:repeat(10,1fr); 
+    grid-template-rows: 10vh;
 }
 
-
-/* .option
+.header
 {
+    background: #F38C10;
+    grid-column: 1/7;
+    overflow: hidden;
+}
+
+.header h1
+{
+    padding: 15px;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.header span
+{
+    color: #16317C;
+}
+
+.white
+{
+    grid-column: 7/11;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 10vh;
+}
+
+.white .navv
+{
+    grid-column: 1/4;
+    overflow: hidden;
+}
+
+.menu ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.menu li
+{
+    list-style-type: none;
+    display: inline-block;
+    padding: 23px;
+    font-size: 16px;
+    letter-spacing: 0.12em;
     position: relative;
-    top: 0;
-} */
+    color: #F38C10;
+}
 
-/* NAVBAR CODE */
-/* .option{
-    position: sticky;
-    z-index: 50;
-    top: 1px;
-} */
-       nav ul
-        {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav ul div{
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            width: calc(100% - 62.8%);
-        }
-        nav ul li{
-            position: relative;
-            /* flex: 1 1 0; */
-            padding: 15px;
-            /* padding-top: 30px; */
-            color: #F38C10;
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-        }
-
-
-        #special
-        {
-            /* flex-grow: 8;
-            padding: 20px;
-            padding-left: 110px; */
-            font-size: 27px;
-            /* background: #ff878d; */
-            color: #16317C;
-            width: 62.8%;
-            background: #F38C10;
-        }
-        #special span
-        {
-            color: white;
-            font-size: 31px;
-        }
-
-        .hmm::after
+.menu li::after
         {
             content: "";
             position: absolute;
@@ -110,26 +106,62 @@ html
 
         }
 
-        li:hover::after
-        {
-            width: 100%;
-        }
-       
-/* Basic Intro */
-
-.wrapper
+.menu li:hover::after
 {
+    width: 100%;
+}
+       
+
+.white .picture
+{
+    grid-column: 1/4;
+    grid-row: 2/4;
+    overflow: hidden;
     display: grid;
-    grid-template-columns: 62.8% 37.2%;
-    height: 91vh;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
-.wrapperone
+.picture .picture1
+{
+    background: #16317C;
+    border-radius: 27px;
+    justify-self: center;
+    animation: wholebox 2s forwards;
+}
+
+.white .smicon
+{
+
+    grid-column: 1/4;
+    grid-row: 4/7;
+    overflow: hidden;
+}
+
+.smicon ul
+{
+    margin-left: 110px;
+}
+
+.smicon li
+{
+    list-style-type: none;
+    display: inline-block;
+    padding: 30px;
+    color: #16317C;
+    animation: wholebox 2s forwards;
+}
+
+
+.yellow
 {
     background: #F38C10;
+    grid-row: 2/3;
+    grid-column: 1/7;
 }
 
-.wrapperone h3
+.yellow h3
 {
     color: white;
     font-size: 2em;
@@ -138,7 +170,7 @@ html
     animation: wholebox 2s forwards;
 }
 
-.wrapperone h1
+.yellow h1
 {
     color: #16317C;
     font-size: 3.5em;
@@ -146,7 +178,7 @@ html
     animation: wholebox 2s forwards;
 }
 
-.wrapperone p
+.yellow p
 {
     color: white;
     text-align: center;
@@ -156,53 +188,14 @@ html
     animation: wholebox 2s forwards;
 }
 
-.wrapperone div{
+.yellow div{
     background: #16317C;
     width: 170px;
     height: 60px;
-    /* border-radius: 50%; */
     color: white;
     padding:20px;
     text-align: center;
     margin: 30px auto;
-    animation: wholebox 2s forwards;
-}
-
-.wrappertwo
-{
-    /* background: darkmagenta; */
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(1,45vh);
-}
-
-.wrappertwoone
-{
-    grid-row-start: 1;
-    grid-row-end: 2;
-    background: #16317C;
-    justify-self: center;
-    align-self: end;
-    border-radius: 27px;
-    animation: wholebox 2s forwards;
-}
-
-.wrappertwotwo
-{
-    grid-row-start: 2;
-    grid-row-end: 3;
-    /* background: navy; */
-    justify-self: center;
-    align-self: start;
-}
-
-.wrappertwotwo li
-{
-    list-style-type: none;
-    display: inline-block;
-    padding:17px;
-    color: #16317C;
-    margin-top: 30px;
     animation: wholebox 2s forwards;
 }
 
@@ -224,6 +217,16 @@ html
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* second(detailed-Intro) */
 
 .second
@@ -231,27 +234,23 @@ html
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    /* background: pink; */
     overflow: hidden;
 }
 
 
 .secondd
 {
-  /* background: plum; */
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns:62.8% 37.2%;
+  grid-template-columns:60% 40%;
 
 }
 
 .second1
 {
-    /* background: purple; */
     text-align: left;
     line-height: 1.7em;
-    /* margin-top: 20vh; */
     margin: 15vh;
     overflow: hidden;
 }
@@ -277,34 +276,9 @@ html
 .second2
 {
     background: #16317C;
-    /* background: url(https://wallpaperaccess.com/full/133891.jpg); */
  
 }
 
-.second21
-{
-    height: 92%;
-    width: 92%;
-    margin:22px;
-    margin-top: 32px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-
-    grid-gap:25px;
-    overflow: hidden;
-}
-
-.second21 .one
-{
-    background: #F38C10;
-    border-radius: 25px;
-}
-
-.second21 .two
-{
-    background: #F38C10;
-    border-radius: 25px;
-}
 
 
 /* projects */
@@ -480,10 +454,10 @@ html
     border-radius: 10px;
     color: #16317C;
     font-style: bold;
-    background-image: url(https://wallpaperaccess.com/full/133891.jpg);
+    /* background-image: url(https://wallpaperaccess.com/full/133891.jpg); */
+    background: #F38C10;
     padding: 17rem 0 0;
     line-height: 2.2;
-    /* max-width: 35ch; */
     overflow: hidden;
     transition: transform 500ms ease;
 }
@@ -630,17 +604,19 @@ html
 
 .contact1 li div:hover
 {
-    background: url(https://wallpaperaccess.com/full/133891.jpg);
+    /* background: url(https://wallpaperaccess.com/full/133891.jpg); */
+    background: #F38C10;
 }
 
 .contact2
 {
     height: 60vh;
     width: 35%;
-    background: url(https://wallpaperaccess.com/full/133891.jpg);
+    /* background: url(https://wallpaperaccess.com/full/133891.jpg); */
     margin:5vh auto;
     border-radius: 12px;
     animation: wholebox 2s forwards;
+    background: white;
 }
 
 .contact2 h2
