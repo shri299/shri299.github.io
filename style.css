@@ -1,3 +1,9 @@
+:root{
+    --first-color:#C6106B;
+    --second-color:#940DA0;
+    --third-color:#FBF4F7;
+}
+
 @font-face{
     src:url("Fonts/Montserrat.ttf");
     font-family: Montserrat;
@@ -26,10 +32,10 @@ html
     background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #940DA0;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background:#940DA0;
 }
 
 .first
@@ -42,7 +48,7 @@ html
 
 .header
 {
-    background: #F38C10;
+    background: var(--third-color);
     grid-column: 1/7;
     overflow: hidden;
 }
@@ -50,13 +56,14 @@ html
 .header h1
 {
     padding: 15px;
-    color: white;
+    color: var(--second-color);
     letter-spacing: 3px;
 }
 
 .header span
 {
-    color: #16317C;
+    color: var(--first-color);
+    font-size: 1.2em;
 }
 
 .white
@@ -66,6 +73,7 @@ html
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 10vh;
+    background: var(--first-color);
 }
 
 .white .navv
@@ -90,14 +98,20 @@ html
     font-size: 16px;
     letter-spacing: 0.12em;
     position: relative;
-    color: #F38C10;
+    color: var(--third-color);
+}
+
+.menu a
+{
+    text-decoration: none;
+    color: var(--third-color);
 }
 
 .menu li::after
         {
             content: "";
             position: absolute;
-            background-color:#F38C10 ;
+            background-color:var(--third-color);
             height: 4px;
             width: 0;
             left: 0;
@@ -125,7 +139,7 @@ html
 
 .picture .picture1
 {
-    background: #16317C;
+    background: var(--third-color);
     border-radius: 27px;
     justify-self: center;
     animation: wholebox 2s forwards;
@@ -135,35 +149,41 @@ html
 {
 
     grid-column: 1/4;
-    grid-row: 4/7;
+    grid-row: 3/7;
     overflow: hidden;
+    justify-self: center;
+    align-self: center;
 }
 
-.smicon ul
-{
-    margin-left: 110px;
-}
 
-.smicon li
+.smicon  li
 {
     list-style-type: none;
     display: inline-block;
     padding: 30px;
-    color: #16317C;
+    color: var(--third-color);
     animation: wholebox 2s forwards;
 }
+
+.smicon a
+{
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+
 
 
 .yellow
 {
-    background: #F38C10;
+    background: var(--third-color);
     grid-row: 2/3;
     grid-column: 1/7;
 }
 
 .yellow h3
 {
-    color: white;
+    color: var(--second-color);
     font-size: 2em;
     text-align: center;
     margin-top: 170px;
@@ -172,7 +192,7 @@ html
 
 .yellow h1
 {
-    color: #16317C;
+    color: var(--first-color);
     font-size: 3.5em;
     text-align: center;
     animation: wholebox 2s forwards;
@@ -180,7 +200,7 @@ html
 
 .yellow p
 {
-    color: white;
+    color: var(--second-color);
     text-align: center;
     letter-spacing: 1px;
     margin-top: 10px;
@@ -189,10 +209,10 @@ html
 }
 
 .yellow div{
-    background: #16317C;
+    background: var(--second-color);
     width: 170px;
     height: 60px;
-    color: white;
+    color: var(--third-color);
     padding:20px;
     text-align: center;
     margin: 30px auto;
@@ -215,18 +235,6 @@ html
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* second(detailed-Intro) */
 
 .second
@@ -244,6 +252,7 @@ html
   height: 100%;
   display: grid;
   grid-template-columns:60% 40%;
+  background: var(--first-color);
 
 }
 
@@ -253,163 +262,195 @@ html
     line-height: 1.7em;
     margin: 15vh;
     overflow: hidden;
+    transform: translateY(50%) scale(0.1);
+    opacity: 0.1;
+    transition: all 2s ease-in-out;
+    color: var(--third-color);
+    
 }
 
+.reveal-content{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
 .second1 h1
 {
     padding: 30px;
     text-align: center;
     padding-top: 100px;
+    color: var(--third-color);
 }
 
 .second1 .button
 {
     height: 60px;
     width: 170px;
-    background: #F38C10;
+    background: var(--second-color);
     text-align: center;
     padding: 15px;
     margin:20px;
     margin-left: 0;
+    color: var(--third-color);
+}
+
+.second1 .button a
+{
+    text-decoration: none;
+    color: var(--third-color);
 }
 
 .second2
 {
-    background: #16317C;
- 
+    background: var(--third-color);
 }
 
+.second2 h1
+{
+    text-align: center;
+    padding: 20px;
+    color: var(--first-color);
+}
+
+.second2 li
+{
+    list-style-type: none;
+}
+
+.second2 .pl
+{
+    height: 30%;
+    width: 100%;
+}
+.second2 .pl ul
+{
+    margin-top: 30px;
+}
+.second2  h2
+{
+    padding: 15px;
+    color: var(--first-color);
+}
+.second2 li
+{
+    padding: 15px;
+    background: var(--second-color);
+    width: 170px;
+    height: 50px;
+    margin: 15px;
+    display: inline-block;
+    /* border-radius: 15px; */
+    text-align: center;
+    color: var(--third-color);
+}
+.second2 .fw
+{
+    height: 15%;
+    width: 100%;
+}
+.second2 .db
+{
+    height: 15%;
+    width: 100%;
+}
+.second2 .itc
+{
+    height: 25%;
+    width: 100%;
+}
 
 
 /* projects */
 
 .project
 {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
-    /* background: url(https://wallpaperaccess.com/full/133891.jpg); */
-    color: white;
-    background: #F38C10;
+    background: var(--second-color);
+    overflow: hidden;
 }
 
 .project h1
 {
-    color: #16317C;
-    padding: 15px;
+    color: var(--third-color);
+    padding: 13px;
     text-align: center;
-    size: 2em;
+    margin:30px;
 }
 
-.projectt
+.project-grid
 {
+    height: 75vh;
     width: 90%;
-    height: 70%;
-    /* background: darkgreen; */
-    margin:0 auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap:35px;
-    overflow: hidden;
-    margin-top: 3%;
+    margin:0 auto;
+    grid-gap:45px;
 }
 
-.project1
+.project-one
 {
-    /* background: #16317C; */
-    background: url(https://wallpaperaccess.com/full/133891.jpg);
-    border-radius: 25px;
+    height: 80%;
+    border-radius: 20px;
+    background: var(--third-color);
+    transition: transform 2s ease;
     overflow: hidden;
-    width: 90%;
 }
-
-.project11
+.project-two
+{
+    background: var(--third-color);
+    height: 80%;
+    border-radius: 20px;
+    transition: transform 2s ease;
+    overflow: hidden;
+}
+.project-three
+{
+    background: var(--third-color);
+    height: 80%;
+    border-radius: 20px;
+    transition: transform 2s ease;
+    overflow: hidden;
+}
+.img-one,
+.img-two,
+.img-three
 {
     width: 100%;
     height: 50%;
-    background: url(https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmV0ZmxpeHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80) no-repeat;
-    background-position: center;
     overflow: hidden;
-    transition: transform 500ms ease;
 }
-
-.project11:hover,
-.project21:hover,
-.project31:hover
-{
-    transform: scale(1.12);
-}
-
-.project12
+.project h3
 {
     text-align: center;
-    transition: transform 500ms ease;
-    /* background: url(https://wallpaperaccess.com/full/133891.jpg); */
+    padding: 10px;
+    color: var(--first-color);
+}
+.project p
+{
+    padding: 20px;
+    text-align: center;
+    line-height: 1.5em;
+    color: var(--first-color);
+}
+.project .visit
+{
+    height: 50px;
+    width: 35%;
+    background: var(--second-color);
+    color: var(--third-color);
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+}
+.project-one:hover,
+.project-two:hover,
+.project-three:hover
+{
+    box-shadow: 0px 15px 25px rgb(37, 36, 36);
+    transform: scale(1.02);
 }
 
-.project12 p
-{
-    line-height: 1.6;
-    color: white;
-}
 
-.project12 button
-{
-    background:#F38C10;
-    color: white;
-    margin: 10px;
-    padding: 5px;
-    border: none;
-    width: 150px;
-    height: 60px;
-}
-
-.project2
-{
-    background: url(https://wallpaperaccess.com/full/133891.jpg);
-    border-radius: 20px;
-    overflow: hidden;
-    width: 90%;
-}
-
-.project21
-{
-    width: 100%;
-    height: 50%;
-    background:url(Employee\ Payroll.png) no-repeat;
-    background-position: center;
-    overflow: hidden;
-    transition: transform 500ms ease;
-}
-
-.project22
-{
-    
-    width: 100%;
-    height: 50%;
-}
-
-.project3
-{
-    background: url(https://wallpaperaccess.com/full/133891.jpg);
-    border-radius: 20px;
-    overflow: hidden;
-    width: 90%;
-}
-
-.project31
-{
-    height: 50%;
-    width: 100%;
-    background:url(https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-    overflow: hidden;
-    transition: transform 500ms ease;
-}
-
-.project32
-{
-    width: 100%;
-    height: 50%;
-}
 
 
 /* work */
@@ -418,141 +459,92 @@ html
 {
     height: 90vh;
     width: 100%;
-    /* background: red; */
+    background: var(--third-color);
     overflow: hidden;
 }
-
 .work h1
 {
     text-align: center;
-    padding-top: 15px;
-    color: #16317C;
+    padding: 13px;
+    color: var(--second-color);
+    margin:30px;
 }
 
-.work1
+.work-grid
 {
-    /* background: chartreuse; */
-    width: 100%;
-    height: 90%;
-    margin-top: 20px;
+    height: 75vh;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    margin:0 auto;
+    grid-gap:45px;
 }
 
-/* .work11
+.experience-one
 {
-    background: chocolate;
-} */
-
-.work111
-{
-    height: 75%;
-    width: 60%;
-    /* background: seagreen; */
-    margin:0 auto;
-    margin-top: 75px;
-    border-radius: 10px;
-    color: #16317C;
-    font-style: bold;
-    /* background-image: url(https://wallpaperaccess.com/full/133891.jpg); */
-    background: #F38C10;
-    padding: 17rem 0 0;
-    line-height: 2.2;
+    height: 80%;
+    border-radius: 20px;
+    background: var(--first-color);
+    transition: transform 2s ease;
     overflow: hidden;
-    transition: transform 500ms ease;
 }
 
-.work111-body
+.experience-two
 {
-    color: white;
-    line-height: 1.5;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    background: var(--first-color);
+    height: 80%;
+    border-radius: 20px;
+    transition: transform 2s ease;
+    overflow: hidden;
 }
 
 
-.work111:hover
+.experience-three
 {
-    transform: scale(1.05);
+    background: var(--first-color);
+    height: 80%;
+    border-radius: 20px;
+    transition: transform 2s ease;
+    overflow: hidden;
 }
-
-.work111-content
+.work-img1,
+.work-img2,
+.work-img3
 {
-    --padding:1.6rem;
-    padding: var(--padding);
-    background: linear-gradient(
-        hsl(0 0% 0% / 0),
-        hsl(0 0% 0% / 0.3) 20%,
-        hsl(0 0% 0% / 1)
-    );
-    transform: translateY(56%);
-    transition: transform 500ms ease;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
 }
-
-.work111-content > *:not(.work111-title)
+.work h3
 {
-    opacity: 0;
-    transition: opacity 500ms ease;
+    text-align: center;
+    padding: 15px;
+    color: var(--third-color);
 }
-
-.work111:hover .work111-content
+.work p
 {
-    transform: translateY(0);
+    text-align: center;
+    padding: 20px;
+    line-height: 1.5em;
+    color: var(--third-color);
 }
-
-.work111:hover .work111-content>*:not(.work111-title)
+.work .work-cred
 {
-    opacity: 1;
+    height: 50px;
+    width: 40%;
+    background: var(--second-color);
+    color: var(--third-color);
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px;
 }
-
-.work111-title
+.experience-one:hover,
+.experience-two:hover,
+.experience-three:hover
 {
-    position: relative;
-    width: max-content;
+    box-shadow: 0px 15px 25px gray;
+    transform: scale(1.02);
 }
-
-.work111-title::after
-{
-    content: "";
-    position: absolute;
-    height: 4px;
-    width: calc(100% + var(--padding));
-    background: #16317C;
-    left:calc(var(--padding)*-1) ;
-    bottom: 0;
-    transform-origin: left;
-    transform: scale(0);
-    transition: transform 500ms ease;
-}
-
-.work111:hover .work111-title::after
-{
-    transform: scale(1);
-}
-
-.work111-content .button
-{
-    text-decoration: none;
-    background: #F38C10;
-    color: white;
-    padding: 10px;
-    margin-top: 15px;
-}
-
-.work111-content .button:hover,
-.work111-content .button:focus
-{
-    background: #ec9934;
-}
-
-/* .work122
-{
-    height: 90%;
-    width: 60%;
-    background: seagreen;
-    margin:0 auto;
-    border-radius: 10px;
-} */
 
 /* contact */
 
@@ -561,13 +553,13 @@ html
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    color: white;
-    background: #F38C10;
+    color: var(--third-color);
+    background: var(--first-color);
 }
 
 .contactt
 {
-    background: #16317C;
+    background: var(--second-color);
     height: 94vh;
     width: 98%;
     margin: 3vh auto;
@@ -605,7 +597,13 @@ html
 .contact1 li div:hover
 {
     /* background: url(https://wallpaperaccess.com/full/133891.jpg); */
-    background: #F38C10;
+    background: var(--first-color);
+}
+
+.contact1 a
+{
+    text-decoration: none;
+    color: var(--third-color);
 }
 
 .contact2
@@ -616,7 +614,7 @@ html
     margin:5vh auto;
     border-radius: 12px;
     animation: wholebox 2s forwards;
-    background: white;
+    background: var(--third-color);
 }
 
 .contact2 h2
@@ -661,8 +659,8 @@ input
     height: 60px;
     margin-top: 20px;
     margin-left: 180px;
-    background: #F38C10;
-    color: white;
+    background: var(--first-color);
+    color: var(--third-color);
     border-radius: 12px;
     border: none;
     font-size: 1em;
