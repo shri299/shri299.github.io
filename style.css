@@ -59,7 +59,7 @@ html {
 }
 
 .white {
-  grid-column: 7/11;
+  grid-column: 7/12;
   grid-row: 1/3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -215,6 +215,7 @@ html {
   display: grid;
   grid-template-columns: 60% 40%;
   background: var(--first-color);
+  /* background: var(--third-color); */
 }
 
 .second1 {
@@ -222,16 +223,9 @@ html {
   line-height: 1.7em;
   margin: 15vh;
   overflow: hidden;
-  transform: translateY(50%) scale(0.1);
-  opacity: 0.1;
-  transition: all 2s ease-in-out;
   color: var(--third-color);
 }
 
-.reveal-content {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
 .second1 h1 {
   padding: 30px;
   text-align: center;
@@ -287,7 +281,6 @@ html {
   height: 50px;
   margin: 15px;
   display: inline-block;
-  /* border-radius: 15px; */
   text-align: center;
   color: var(--third-color);
 }
@@ -476,7 +469,7 @@ html {
 }
 
 .contactt {
-  background: var(--second-color);
+  /* background: var(--second-color); */
   height: 94vh;
   width: 98%;
   margin: 3vh auto;
@@ -509,7 +502,7 @@ html {
 
 .contact1 li div:hover {
   /* background: url(https://wallpaperaccess.com/full/133891.jpg); */
-  background: var(--first-color);
+  background: var(--second-color);
 }
 
 .contact1 a {
@@ -569,9 +562,7 @@ input {
   /* margin:20px auto; */
   width: 160px;
   height: 60px;
-  /* margin-top: 20px;
-    margin-left: 180px; */
-  background: var(--first-color);
+  background: var(--second-color);
   color: var(--third-color);
   border-radius: 12px;
   border: none;
@@ -596,3 +587,363 @@ input {
 #root {
   display: none;
 }
+
+@media screen  and (max-width:1300px) {
+    .menu li
+    {
+        padding: 15px;
+    }
+    .second2 .pl ul {
+        margin-top: 15px;
+      }
+    .second2 li {
+        padding: 12px;
+        width: 110px;
+        height: 50px;
+        margin: 10px;
+      }
+      .img-one,
+      .img-two,
+      .img-three {
+        width: 100%;
+        height: 40%;
+        overflow: hidden;
+      }
+      .work-img1,
+      .work-img2,
+      .work-img3 {
+        width: 100%;
+        height: 40%;
+        overflow: hidden;
+      }
+      .work .work-cred
+      {
+        width: 55%;
+      }
+}
+
+@media screen and (max-width:1150px) {
+
+  .header {
+    grid-column: 1/12;
+    grid-row: 1/2;
+  }
+  .yellow
+  {
+    grid-column: 1/12;
+    grid-row: 2/5;
+  }
+  .white {
+    grid-column: 1/12;
+    grid-row: 5/12;
+  }
+  .first
+  {
+    height: 150vh;
+  }
+
+  .second1
+  {
+    grid-column: 1/12;
+    grid-row: 1/6;
+    background: var(--third-color);
+    color: var(--first-color);
+    margin:9vh;
+  }
+  .second1 h1
+  {
+    color: var(--first-color);
+    padding-top: 30px;
+  }
+  .second2
+  {
+    grid-column: 1/12;
+    grid-row: 6/12;
+    background: var(--first-color);
+    color: white;
+  }
+  .second
+  {
+    height: 170vh;
+    background: var(--third-color);
+  }
+  .secondd
+  {
+    background: var(--third-color);
+  }
+  .menu li
+    {
+        padding: 25px;
+        font-size: 1.3em;
+    }
+    .yellow h3
+    {
+      margin-top: 100px;
+    }
+
+    .white .smicon {
+      justify-self: center;
+      align-self: end;
+    }
+
+    .second2 h2, .second2 h1
+     {
+       color: var(--third-color);
+     }
+     .second2 .pl {
+      height: 20%;
+    }
+    .second2 .fw {
+      height: 20%;
+    }
+    .second2 .itc {
+      height: 30%;
+      width: 100%;
+      padding:50px
+    }
+    .second2
+    {
+      text-align: center;
+    }
+}
+
+@media screen and (max-width:1130px) {
+  .project .visit
+  {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:1020px) {
+  .project p
+  {
+    padding:10px;
+    line-height: 1.2em;
+  }
+  .work .work-cred {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width:950px) {
+  .work-grid
+  {
+    grid-gap:10px;
+    width: 97%;
+  }
+  .project-grid
+  {
+    grid-gap:10px;
+    width: 97%;
+  }
+  .contact2
+  {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:790px) {
+  .experience-one,
+  .experience-two,.experience-three
+  {
+    height: 90%;
+  }
+}
+
+@media screen and (max-width:715px)
+{
+  .experience-one,
+  .experience-two,.experience-three
+  {
+    height: 95%;
+  }
+
+  .project-one,.project-two,.project-three
+  {
+    height: 90%;
+  }
+}
+
+@media screen and (max-width:677px)
+{
+  .project
+  {
+    height: 200vh;
+  }
+  .project-grid
+  {
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,60vh);
+  }
+
+  .work
+  {
+    height: 200vh;
+  }
+  .work-grid
+  {
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,60vh);
+  }
+  .contact2
+  {
+    width: 60%;
+  }
+
+  .second2 .itc {
+    height: 20%;
+    width: 100%;
+    padding:20px
+  }
+  .second2 .fw {
+    margin-top: 50px;
+  }
+  .menu li
+    {
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .second1
+    {
+      line-height: 1.6em;
+      padding-top: 30px;
+      margin:2vh;
+    }
+    .second1 .button
+    {
+      margin:5px;
+    }
+  
+}
+
+@media screen and (max-width:480px)
+{
+
+  .contact1 li div
+  {
+    width: 60px;
+    margin:12px;
+  }
+  .menu li
+    {
+        padding: 10px;
+        
+    }
+    .contact2 
+  {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width:445px)
+{
+  .second
+  {
+    height: 200vh;
+  }
+  .contact2 
+  {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:420px) {
+
+  .picture1
+  {
+    width: 200px;
+    height: 200px;
+  }
+
+  .picture1 img 
+  {
+    width: 200px;
+    height: 200px;
+  }
+
+  .smicon li a 
+  {
+    font-size: 0.8em;
+  }
+
+  .contact11 a, .contact12 a, .contact13 a
+  {
+    font-size: 0.8em;
+  }
+
+  .contact2 
+  {
+    width: 80%;
+  }
+
+  .menu li
+    {
+        padding: 10px;
+        font-size: 0.7em;
+    }
+
+    .fw
+    {
+      padding: 35px;
+    }
+  
+}
+
+@media screen and (max-width:405px)
+{
+     .second1
+     {
+       font-size: 0.8em;
+     }
+
+     .second1 .button
+     {
+       width: 130px;
+       height: 50px;
+     }
+
+     .second2
+     {
+       font-size: 0.8em;
+     }
+     
+}
+
+@media screen and (max-width:340px)
+{
+  .smicon li
+  {
+    padding: 15px;
+  }
+
+  .work 
+  {
+    height: 210vh;
+  }
+  .contact2 
+  {
+    width: 95%;
+  }
+
+  .second2 li
+  {
+    font-size: 0.8em;
+    width: 90px;
+    height: 50px;
+
+  }
+  
+  .second2
+  {
+    height: 100vh;
+  }
+
+  .second
+  {
+    height: 165vh;
+  }
+}
+
