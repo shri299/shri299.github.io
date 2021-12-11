@@ -188,6 +188,13 @@ html {
   animation: wholebox 2s forwards;
 }
 
+.yellow div a
+{
+  text-decoration: none;
+  color: var(--third-color);
+
+}
+
 /* Basic Intro Animation */
 
 @keyframes wholebox {
@@ -370,6 +377,11 @@ html {
   text-align: center;
   padding: 15px;
 }
+.project .visit a
+{
+  text-decoration: none;
+  color: var(--third-color);
+}
 .project-one:hover,
 .project-two:hover,
 .project-three:hover {
@@ -450,6 +462,11 @@ html {
   text-align: center;
   margin: 0 auto;
   padding: 15px;
+}
+.work .work-cred a
+{
+  text-decoration: none;
+  color: var(--third-color);
 }
 .experience-one:hover,
 .experience-two:hover,
