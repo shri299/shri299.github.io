@@ -1,376 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <title>Srishti Srivastava</title>
-  </head>
-  <body>
-    <div class="loader">
-      <span>
-        <svg
-          width="57"
-          height="57"
-          viewBox="0 0 57 57"
-          xmlns="http://www.w3.org/2000/svg"
-          stroke="#fff"
-        >
-          <g fill="#C6106B" fill-rule="evenodd">
-            <g transform="translate(1 1)" stroke-width="2">
-              <circle cx="5" cy="50" r="5">
-                <animate
-                  attributeName="cy"
-                  begin="0s"
-                  dur="2.2s"
-                  values="50;5;50;50"
-                  calcMode="linear"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="cx"
-                  begin="0s"
-                  dur="2.2s"
-                  values="5;27;49;5"
-                  calcMode="linear"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              <circle cx="27" cy="5" r="5">
-                <animate
-                  attributeName="cy"
-                  begin="0s"
-                  dur="2.2s"
-                  from="5"
-                  to="5"
-                  values="5;50;50;5"
-                  calcMode="linear"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="cx"
-                  begin="0s"
-                  dur="2.2s"
-                  from="27"
-                  to="27"
-                  values="27;49;5;27"
-                  calcMode="linear"
-                  repeatCount="indefinite"
-                />
-              </circle>
-              <circle cx="49" cy="50" r="5">
-                <animate
-                  attributeName="cy"
-                  begin="0s"
-                  dur="2.2s"
-                  values="50;50;5;50"
-                  calcMode="linear"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="cx"
-                  from="49"
-                  to="49"
-                  begin="0s"
-                  dur="2.2s"
-                  values="49;5;27;49"
-                  calcMode="linear"
-                  repeatCount="indefinite"
-                />
-              </circle>
-            </g>
-          </g>
-        </svg>
-      </span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #111;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 8px;
+        }
+
+        .project, .experience {
+            margin-bottom: 30px;
+        }
+
+        .project h3, .experience h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .project p, .experience p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .tech-stack {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p class="subtitle">B.E Final Year Student | Software Developer</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com">Email</a>
+                <a href="https://github.com/shri299" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>About</h2>
+            <p>B.E final year student currently looking for exciting and new opportunities. Would be happy to connect!</p>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            
+            <div class="project">
+                <h3>Netflix Clone</h3>
+                <p>A clone of the original Netflix landing page. A responsive website.</p>
+                <p class="tech-stack">HTML • CSS • JavaScript</p>
+            </div>
+
+            <div class="project">
+                <h3>Salary Management System</h3>
+                <p>A fullstack application which calculates the net salary of an employee each month.</p>
+                <p class="tech-stack">HTML • CSS • JavaScript • Node.js • SQL</p>
+            </div>
+
+            <div class="project">
+                <h3>Attendance Management System</h3>
+                <p>An application which calculates and manages the attendance of students in colleges and universities.</p>
+                <p class="tech-stack">C++</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            
+            <div class="experience">
+                <h3>SDE Intern</h3>
+                <p>Worked as an SDE intern on a B2B ecommerce web application. Led the front end and database team.</p>
+            </div>
+
+            <div class="experience">
+                <h3>SDE Intern - GRIP Rotational Program</h3>
+                <p>Made a simple banking transaction system.</p>
+            </div>
+
+            <div class="experience">
+                <h3>Open Source Developer - GirlScript Winter of Contribution</h3>
+                <p>Enhanced my skills by working as an open source developer.</p>
+            </div>
+        </section>
     </div>
-    <div id="root">
-      <div class="first">
-        <div class="header">
-          <h1><span>M</span>y <span>P</span>ortfolio.</h1>
-        </div>
-
-        <div class="yellow">
-          <h3>Hi, my name is</h3>
-          <h1>Srishti Srivastava</h1>
-          <p>
-            I am B.E final year student.Curently looking for exciting and new
-            opportunities.<br />
-            Would be happy to connect!
-          </p>
-          <div class="yellow-button"><a href="https://drive.google.com/file/d/1AQQW92472RQs_7GuINR11HSh_rnC_CS-/view?usp=sharing" target="_blank">View Resume</a></div>
-        </div>
-
-        <div class="white">
-          <div class="navv">
-            <div class="menu">
-              <ul>
-                <li><a href="#whatever">About</a></li>
-                <li><a href="#whatever">Skills</a></li>
-                <li><a href="#whatever1">Projects</a></li>
-                <li><a href="#whatever2">Work</a></li>
-                <li><a href="#whatever3">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="picture">
-            <div class="picture1">
-              <img src="Avatar.svg" width="280px" height="280px" />
-            </div>
-          </div>
-          <div class="smicon">
-            <ul>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/srishti-srivastava-35b318205/"
-                  ><i class="fab fa-linkedin fa-4x"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://twitter.com/Srishti_iam"
-                  ><i class="fab fa-twitter-square fa-4x"></i
-                ></a>
-              </li>
-              <li>
-                <a href="mailto:ssrishti508@gmail.com" target="_blank"
-                  ><i class="fas fa-envelope-open fa-4x"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- second part(detailed Intro) -->
-      <div class="second" id="whatever">
-        <!-- <h1>About Me!</h1> -->
-        <div class="secondd">
-          <div class="second1">
-            <h1>About Me</h1>
-            Hi, I am Srishti. I am a final year student pursuing bachelor of
-            technology in Information Science and Engineering. With prior
-            experience of few internships as web developer I am an aspiring
-            software developer with holistic knowledge of software development
-            and design. I am mainly experienced in front-end web development
-            with latest technologies like ES6 and ReactJS.<br />
-            I like building all sorts of things that have to do with the web.
-            This includes websites ranging from simple static design to full
-            stack social media web apps. I also like the design aspect of things
-            and always try my best to provide amazing UX.
-            <div class="button"><a href="#whatever3">Contact Me.</a></div>
-          </div>
-          <div class="second2">
-            <h1>Skills</h1>
-            <div class="pl">
-              <h2>Programming languages</h2>
-              <ul>
-                <li>C++</li>
-                <li>HTML</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-              </ul>
-            </div>
-            <div class="fw">
-              <h2>Frameworks</h2>
-              <ul>
-                <li>Bootstrap</li>
-              </ul>
-            </div>
-            <div class="db">
-              <h2>Database languages</h2>
-              <ul>
-                <li>SQL</li>
-              </ul>
-            </div>
-            <div class="itc">
-              <h2>IT Constructs</h2>
-              <ul>
-                <li id="#haww">DSA</li>
-                <li>Algorithms</li>
-                <li>OOPS</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project -->
-
-      <div class="project" id="whatever1">
-        <h1>My Projects</h1>
-        <div class="project-grid">
-          <div class="project-one">
-            <div class="img-one">
-              <img src="Netflix.png" width="100%" height="100%" />
-            </div>
-            <div class="cont-one">
-              <h3>Netflix Landing Page</h3>
-              <p>
-                It is a clone of the original Netflix landing page.A responsive
-                website made using HTML, CSS and javascript
-              </p>
-              <div class="visit"><a href="https://shri299.github.io/Netflix-Landing-Page/" target="_blank">Visit Link</Link></a></div>
-            </div>
-          </div>
-          <div class="project-two">
-            <div class="img-two">
-              <img src="imgg.jpeg" width="100%" height="100%" />
-            </div>
-            <div class="cont-tow">
-              <h3>Payroll Management System</h3>
-              <p>
-                A fullstack application which calculates the net salary of a
-                employee each month. Made using HTML, CSS, javascript, Nodejs,
-                SQL
-              </p>
-              <div class="visit">Visit Link</div>
-            </div>
-          </div>
-          <div class="project-three">
-            <div class="img-three">
-              <img src="imggg.jpeg" width="100%" height="100%" />
-            </div>
-            <div class="cont-three">
-              <h3>Attendance Management System</h3>
-              <p>
-                An application which calculates and manages the attendance of
-                students in colleges and university. This is implemented using
-                c++.
-              </p>
-              <div class="visit">Visit Link</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- work -->
-
-      <div class="work" id="whatever2">
-        <h1>Work Experience</h1>
-        <div class="work-grid">
-          <div class="experience-one">
-            <div class="work-img1">
-              <img src="ts.jpeg" width="100%" height="100%" />
-            </div>
-            <div class="work-cont1">
-              <h3>Technocolab Softwares</h3>
-              <p>
-                Worked as an SDE intern on a b2b ecommerce web application.Lead
-                the front end and database team.
-              </p>
-              <div class="work-cred"><a href="https://drive.google.com/drive/folders/1QWxx1QO0qk8z4Ky_hogdKjcPwlVnddGZ?usp=sharing" target="_blank">See Credentials</a></div>
-            </div>
-          </div>
-          <div class="experience-two">
-            <div class="work-img2">
-              <img src="tsf2.jpeg" width="100%" height="100%" />
-            </div>
-            <div class="work-cont2">
-              <h3>The Sparks Foundation</h3>
-              <p>
-                Worked as an SDE intern under the GRIP roational program. Made a
-                simple banking transaction system.
-              </p>
-              <div class="work-cred"><a href="https://drive.google.com/drive/folders/1aWxy6ELRqZgg9PQHlai9KH2_wL799SxD?usp=sharing" target="_blank">See Credentials</a></div>
-            </div>
-          </div>
-          <div class="experience-three">
-            <div class="work-img3">
-              <img src="girlscript2.jpeg" width="100%" height="100%" />
-            </div>
-            <div class="work-cont3">
-              <h3>GirlScript Foundation</h3>
-              <p>
-                Enhanced my skill by working as an open source developer under
-                the GirlScript winter of contribution program.
-              </p>
-              <div class="work-cred"><a href="https://drive.google.com/file/d/1sU78bal9VjSR3i9hiknkrpCtgJMkaNtw/view?usp=sharing">See Credentials</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- contact -->
-      <div class="contact" id="whatever3">
-        <div class="contactt">
-          <h1>Get in touch!</h1>
-          <div class="contact1">
-            <ul>
-              <li>
-                <div class="contact11">
-                  <a
-                    href="https://www.linkedin.com/in/srishti-srivastava-35b318205/"
-                    ><i class="fab fa-linkedin fa-4x"></i
-                  ></a>
-                </div>
-              </li>
-              <li>
-                <div class="contact12">
-                  <a href="https://twitter.com/Srishti_iam"
-                    ><i class="fab fa-twitter-square fa-4x"></i
-                  ></a>
-                </div>
-              </li>
-              <li>
-                <div class="contact13">
-                  <a href="mailto:ssrishti508@gmail.com"
-                    ><i class="fas fa-envelope-open fa-4x"></i
-                  ></a>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="contact2">
-            <h2>Contact Form</h2>
-            <form action="https://formsubmit.co/ssrishti508@gmail.com" method="post">
-              <input type="hidden" name="_subject" value="New submission!">
-              <label for="name">Name</label><br />
-              <input
-                type="text"
-                id="name"
-                placeholder="Enter Your Name"
-                required
-              />
-              <br /><br />
-              <label for="email" class="label2">Email</label><br />
-              <input
-                type="email"
-                id="email"
-                class="input2"
-                placeholder="Enter Your email"
-                required
-              />
-              <br /><br />
-              <label for="message" class="label3">Message</label><br />
-              <input
-                type="text"
-                id="message"
-                class="input3"
-                placeholder="Enter Your Messsage"
-                required
-              />
-              <div class="div-button">
-                <button class="submit">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="index.js"></script>
-  </body>
+</body>
 </html>
