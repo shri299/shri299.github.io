@@ -12,110 +12,193 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #2d3748;
-            background: #f7fafc;
+            color: #e2e8f0;
+            background: #0f172a;
+            overflow-x: hidden;
+        }
+
+        .background-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+
+        .background-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
         }
 
         header {
-            margin-bottom: 60px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #e2e8f0;
+            text-align: center;
+            margin-bottom: 80px;
+            padding: 60px 20px;
+            position: relative;
         }
 
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #1a202c;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #a78bfa 0%, #ec4899 50%, #8b5cf6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: fadeInUp 0.8s ease-out;
+            background-size: 200% 200%;
+            animation: fadeInUp 0.8s ease-out, gradient 3s ease infinite;
+        }
+
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .subtitle {
-            font-size: 1.2rem;
-            color: #4a5568;
-            margin-bottom: 25px;
-            font-weight: 500;
+            font-size: 1.5rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
         .contact-links {
             display: flex;
-            gap: 25px;
+            gap: 15px;
             flex-wrap: wrap;
-            align-items: center;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
         }
 
         .contact-links a {
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #667eea;
+            color: #cbd5e1;
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
-            transition: all 0.2s ease;
-            padding: 8px 16px;
-            border-radius: 8px;
-            background: white;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 12px 20px;
+            border-radius: 12px;
+            background: rgba(148, 163, 184, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            transition: all 0.3s ease;
         }
 
         .contact-links a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-            color: #5a67d8;
+            transform: translateY(-5px);
+            background: rgba(167, 139, 250, 0.2);
+            border-color: rgba(167, 139, 250, 0.5);
+            box-shadow: 0 10px 30px rgba(167, 139, 250, 0.3);
         }
 
         .icon {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .section-container {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 50px;
         }
 
         section {
-            margin-bottom: 50px;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            background: rgba(30, 41, 59, 0.5);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            border-color: rgba(167, 139, 250, 0.3);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
         }
 
         h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 25px;
-            color: #1a202c;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #f1f5f9;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
         }
 
         h2::before {
             content: '';
-            width: 4px;
-            height: 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
+            width: 6px;
+            height: 40px;
+            background: linear-gradient(180deg, #a78bfa 0%, #ec4899 100%);
+            border-radius: 3px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
         .job, .project {
-            margin-bottom: 30px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 35px;
+            padding: 25px;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 15px;
+            border-left: 3px solid #8b5cf6;
+            transition: all 0.3s ease;
+        }
+
+        .job:hover, .project:hover {
+            background: rgba(139, 92, 246, 0.1);
+            transform: translateX(10px);
+            border-left-color: #ec4899;
         }
 
         .job:last-child, .project:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
             margin-bottom: 0;
         }
 
@@ -123,129 +206,179 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             flex-wrap: wrap;
             gap: 10px;
         }
 
         h3 {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: 600;
-            color: #2d3748;
+            color: #f1f5f9;
+            margin-bottom: 5px;
         }
 
         .company {
-            color: #667eea;
+            color: #a78bfa;
             font-weight: 500;
+            font-size: 1.1rem;
         }
 
         .date {
-            color: #718096;
+            color: #94a3b8;
             font-size: 0.9rem;
             font-weight: 500;
+            padding: 5px 15px;
+            background: rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
         }
 
         .job ul, .project ul {
             margin-left: 20px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .job li, .project li {
-            color: #4a5568;
-            font-size: 0.95rem;
-            margin-bottom: 8px;
+            color: #cbd5e1;
+            font-size: 0.98rem;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .job li::marker, .project li::marker {
+            color: #8b5cf6;
         }
 
         .tech-stack {
-            margin-top: 12px;
+            margin-top: 20px;
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
         }
 
         .tech-tag {
-            background: #edf2f7;
-            color: #667eea;
-            padding: 4px 12px;
-            border-radius: 6px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(236, 72, 153, 0.3) 100%);
+            color: #e9d5ff;
+            padding: 8px 16px;
+            border-radius: 8px;
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 600;
+            border: 1px solid rgba(167, 139, 250, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 25px;
+        }
+
+        .skill-category {
+            padding: 25px;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 15px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: rgba(139, 92, 246, 0.5);
+            transform: translateY(-5px);
         }
 
         .skill-category h4 {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 10px;
+            color: #a78bfa;
+            margin-bottom: 12px;
         }
 
         .skill-category p {
-            color: #4a5568;
-            font-size: 0.9rem;
+            color: #cbd5e1;
+            font-size: 0.95rem;
             line-height: 1.8;
         }
 
         .achievements {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            display: grid;
+            gap: 20px;
         }
 
         .achievement {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 12px;
-            background: #f7fafc;
-            border-radius: 8px;
-            border-left: 3px solid #667eea;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 15px;
+            border-left: 3px solid #ec4899;
+            transition: all 0.3s ease;
+        }
+
+        .achievement:hover {
+            background: rgba(236, 72, 153, 0.1);
+            transform: translateX(10px);
         }
 
         .achievement-icon {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
+            filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.5));
         }
 
         .achievement p {
-            color: #4a5568;
-            font-size: 0.95rem;
+            color: #cbd5e1;
+            font-size: 1rem;
+        }
+
+        .achievement strong {
+            color: #f1f5f9;
+            display: block;
+            margin-bottom: 5px;
         }
 
         .education {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            border-radius: 8px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+            border-radius: 15px;
+            border: 1px solid rgba(167, 139, 250, 0.3);
         }
 
         .education-text h3 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #f1f5f9;
         }
 
         .education-text p {
-            color: #4a5568;
-            font-size: 0.9rem;
+            color: #cbd5e1;
+            font-size: 1rem;
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
+            .hero-title {
+                font-size: 2.5rem;
             }
 
-            .container {
-                padding: 40px 20px;
+            .subtitle {
+                font-size: 1.2rem;
             }
 
             section {
-                padding: 20px;
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
             }
 
             .job-header, .project-header {
@@ -258,13 +391,43 @@
                 gap: 10px;
             }
         }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(139, 92, 246, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-indicator:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.6);
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
     </style>
 </head>
 <body>
+    <div class="background-gradient"></div>
+    
     <div class="container">
         <header>
-            <h1>Srishti Srivastava</h1>
-            <p class="subtitle">Senior Software Engineer</p>
+            <h1 class="hero-title">Srishti Srivastava</h1>
+            <p class="subtitle">Senior Software Engineer • Problem Solver • Tech Enthusiast</p>
             <div class="contact-links">
                 <a href="https://shri299.github.io/" target="_blank">
                     <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -299,146 +462,163 @@
             </div>
         </header>
 
-        <section>
-            <h2>Experience</h2>
-            
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <h3>Senior Software Engineer</h3>
-                        <p class="company">Naukri.com</p>
+        <div class="section-container">
+            <section>
+                <h2>Experience</h2>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <h3>Senior Software Engineer</h3>
+                            <p class="company">Naukri.com</p>
+                        </div>
+                        <span class="date">Mar 2024 - Present</span>
                     </div>
-                    <span class="date">Mar 2024 - Present</span>
+                    <ul>
+                        <li>Redesigned a pipeline-based data porting system from StreamSets to an event-driven architecture using Kafka, cutting data loading time by 30% and improving maintainability</li>
+                        <li>Developed an Elasticsearch-based mistyped search handling system, achieving a 13% boost in search-to-response relevance through typo pattern analysis</li>
+                        <li>Implemented user engagement features including pseudo job listings and diversified search results, leading to measurable increase in user registrations</li>
+                        <li>Built a real-time fuzzy spell-check engine (Java, BK-Tree, Damerau-Levenshtein) reducing long-tail keyword generation by 70%</li>
+                        <li>Designed Kibana-based visualization dashboard to track and forecast user growth, delivering real-time insights for product decisions</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Redesigned a pipeline-based data porting system from StreamSets to an event-driven architecture using Kafka, cutting data loading time by 30% and improving maintainability</li>
-                    <li>Developed an Elasticsearch-based mistyped search handling system, achieving a 13% boost in search-to-response relevance through typo pattern analysis</li>
-                    <li>Implemented user engagement features including pseudo job listings and diversified search results, leading to measurable increase in user registrations</li>
-                    <li>Built a real-time fuzzy spell-check engine (Java, BK-Tree, Damerau-Levenshtein) reducing long-tail keyword generation by 70%</li>
-                    <li>Designed Kibana-based visualization dashboard to track and forecast user growth, delivering real-time insights for product decisions</li>
-                </ul>
-            </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <h3>Software Engineer</h3>
-                        <p class="company">Naukri.com</p>
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <h3>Software Engineer</h3>
+                            <p class="company">Naukri.com</p>
+                        </div>
+                        <span class="date">Jun 2022 - Feb 2024</span>
                     </div>
-                    <span class="date">Jun 2022 - Feb 2024</span>
+                    <ul>
+                        <li>Migrated Suggester microservice from Node.js + Solr to Java Spring Boot + Elasticsearch, integrating Kafka for automated event-driven ingestion</li>
+                        <li>Refactored and migrated legacy PHP code to Java for three critical search microservices, improving performance, stability, and search relevance</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Migrated Suggester microservice from Node.js + Solr to Java Spring Boot + Elasticsearch, integrating Kafka for automated event-driven ingestion</li>
-                    <li>Refactored and migrated legacy PHP code to Java for three critical search microservices, improving performance, stability, and search relevance</li>
-                </ul>
-            </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <h3>SDE Intern</h3>
-                        <p class="company">Nokia</p>
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <h3>SDE Intern</h3>
+                            <p class="company">Nokia</p>
+                        </div>
+                        <span class="date">Mar 2022 - May 2022</span>
                     </div>
-                    <span class="date">Mar 2022 - May 2022</span>
+                    <ul>
+                        <li>Gained hands-on experience in 5G networking architecture, protocols, and performance optimization through intensive technical training</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Gained hands-on experience in 5G networking architecture, protocols, and performance optimization through intensive technical training</li>
-                </ul>
-            </div>
-        </section>
+            </section>
 
-        <section>
-            <h2>Projects</h2>
-            
-            <div class="project">
-                <div class="project-header">
-                    <h3>NutriSnap: AI Powered Food Recognition and Calorie Prediction</h3>
+            <section>
+                <h2>Projects</h2>
+                
+                <div class="project">
+                    <div class="project-header">
+                        <h3>NutriSnap: AI Powered Food Recognition and Calorie Prediction</h3>
+                    </div>
+                    <ul>
+                        <li>Developed a web app using CNN and DenseNet models to classify food images and predict nutritional values</li>
+                        <li>Trained on 4,000 images per class with 80/20 split, integrated with Spring Boot, MySQL, and React</li>
+                        <li>Delivered accurate calorie predictions with real-time result display and user authentication</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">CNN</span>
+                        <span class="tech-tag">DenseNet</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">React</span>
+                    </div>
                 </div>
-                <ul>
-                    <li>Developed a web app using CNN and DenseNet models to classify food images and predict nutritional values</li>
-                    <li>Trained on 4,000 images per class with 80/20 split, integrated with Spring Boot, MySQL, and React</li>
-                    <li>Delivered accurate calorie predictions with real-time result display and user authentication</li>
-                </ul>
-                <div class="tech-stack">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">CNN</span>
-                    <span class="tech-tag">DenseNet</span>
-                    <span class="tech-tag">Spring Boot</span>
-                    <span class="tech-tag">MySQL</span>
-                    <span class="tech-tag">React</span>
-                </div>
-            </div>
 
-            <div class="project">
-                <div class="project-header">
-                    <h3>InsightLens: AI Powered Video Analytics and Summarization Platform</h3>
+                <div class="project">
+                    <div class="project-header">
+                        <h3>InsightLens: AI Powered Video Analytics and Summarization Platform</h3>
+                    </div>
+                    <ul>
+                        <li>Built platform to generate searchable transcripts, AI summaries, and key highlights using Vosk and BERT/T5 models</li>
+                        <li>Integrated Java Spring Boot backend, Elasticsearch semantic search, and AWS S3 storage for quick keyword-based navigation</li>
+                        <li>Reduced manual review time by 65%, improving accessibility and productivity</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Vosk</span>
+                        <span class="tech-tag">BERT/T5</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Elasticsearch</span>
+                        <span class="tech-tag">AWS S3</span>
+                    </div>
                 </div>
-                <ul>
-                    <li>Built platform to generate searchable transcripts, AI summaries, and key highlights using Vosk and BERT/T5 models</li>
-                    <li>Integrated Java Spring Boot backend, Elasticsearch semantic search, and AWS S3 storage for quick keyword-based navigation</li>
-                    <li>Reduced manual review time by 65%, improving accessibility and productivity</li>
-                </ul>
-                <div class="tech-stack">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">FastAPI</span>
-                    <span class="tech-tag">Vosk</span>
-                    <span class="tech-tag">BERT/T5</span>
-                    <span class="tech-tag">Spring Boot</span>
-                    <span class="tech-tag">Elasticsearch</span>
-                    <span class="tech-tag">AWS S3</span>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section>
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Programming Languages</h4>
-                    <p>Java, J2EE</p>
+            <section>
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <p>Java, J2EE</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frameworks</h4>
+                        <p>Spring Boot, Spring Framework</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Concepts</h4>
+                        <p>Data Structures, Algorithms, OOP, Microservices, Design Patterns, Distributed Systems, HLD, LLD</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Technologies</h4>
+                        <p>AWS, MySQL, Elasticsearch, Kibana, Grafana, Apache Kafka, Apache Solr, Aerospike, Git, Jenkins, CI/CD, Docker, Kubernetes, Jira, Nginx</p>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h4>Frameworks</h4>
-                    <p>Spring Boot, Spring Framework</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Concepts</h4>
-                    <p>Data Structures, Algorithms, OOP, Microservices, Design Patterns, Distributed Systems, HLD, LLD</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Technologies</h4>
-                    <p>AWS, MySQL, Elasticsearch, Kibana, Grafana, Apache Kafka, Apache Solr, Aerospike, Git, Jenkins, CI/CD, Docker, Kubernetes, Jira, Nginx</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section>
-            <h2>Education</h2>
-            <div class="education">
-                <div class="education-text">
-                    <h3>Bachelor of Technology</h3>
-                    <p>2018 - 2022</p>
+            <section>
+                <h2>Education</h2>
+                <div class="education">
+                    <div class="education-text">
+                        <h3>Bachelor of Technology</h3>
+                        <p>2018 - 2022</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section>
-            <h2>Achievements</h2>
-            <div class="achievements">
-                <div class="achievement">
-                    <span class="achievement-icon">🏆</span>
-                    <p><strong>Info Edge Merit Award Winner</strong> - 2024</p>
+            <section>
+                <h2>Achievements</h2>
+                <div class="achievements">
+                    <div class="achievement">
+                        <span class="achievement-icon">🏆</span>
+                        <div>
+                            <p><strong>Info Edge Merit Award Winner</strong></p>
+                            <p>2024</p>
+                        </div>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-icon">👥</span>
+                        <div>
+                            <p><strong>Google Developer Students Club Lead</strong></p>
+                            <p>2021-2022</p>
+                        </div>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-icon">💻</span>
+                        <div>
+                            <p><strong>Open Source Mentee</strong></p>
+                            <p>Codeflow by BharatX, 2021</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="achievement">
-                    <span class="achievement-icon">👥</span>
-                    <p><strong>Google Developer Students Club Lead</strong> - 2021-2022</p>
-                </div>
-                <div class="achievement">
-                    <span class="achievement-icon">💻</span>
-                    <p><strong>Open Source Mentee</strong> - Codeflow by BharatX, 2021</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
+    </div>
+
+    <div class="scroll-indicator" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
     </div>
 </body>
 </html>
