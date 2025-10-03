@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Srishti Srivastava - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -14,91 +14,248 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #fafafa;
+            color: #2d3748;
+            background: #f7fafc;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 60px 20px;
         }
 
         header {
             margin-bottom: 60px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e2e8f0;
         }
 
         h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #111;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1a202c;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .subtitle {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #4a5568;
+            margin-bottom: 25px;
+            font-weight: 500;
         }
 
         .contact-links {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .contact-links a {
-            color: #0066cc;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #667eea;
             text-decoration: none;
             font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         .contact-links a:hover {
-            text-decoration: underline;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            color: #5a67d8;
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
         }
 
         section {
             margin-bottom: 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         }
 
         h2 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 25px;
-            color: #111;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 8px;
+            color: #1a202c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .project, .experience {
+        h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .job, .project {
             margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .project h3, .experience h3 {
-            font-size: 1.1rem;
+        .job:last-child, .project:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .job-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .company {
+            color: #667eea;
             font-weight: 500;
-            margin-bottom: 8px;
-            color: #222;
         }
 
-        .project p, .experience p {
-            color: #555;
+        .date {
+            color: #718096;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .job ul, .project ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .job li, .project li {
+            color: #4a5568;
             font-size: 0.95rem;
+            margin-bottom: 8px;
         }
 
         .tech-stack {
-            margin-top: 8px;
-            font-size: 0.85rem;
-            color: #888;
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
-        @media (max-width: 600px) {
+        .tech-tag {
+            background: #edf2f7;
+            color: #667eea;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .skill-category p {
+            color: #4a5568;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .achievements {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .achievement {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: #f7fafc;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+
+        .achievement-icon {
+            font-size: 1.5rem;
+        }
+
+        .achievement p {
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .education {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-radius: 8px;
+        }
+
+        .education-text h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .education-text p {
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .container {
                 padding: 40px 20px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .job-header, .project-header {
+                flex-direction: column;
+            }
+
+            .education {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
             }
         }
     </style>
@@ -106,58 +263,180 @@
 <body>
     <div class="container">
         <header>
-            <h1>Your Name</h1>
-            <p class="subtitle">B.E Final Year Student | Software Developer</p>
+            <h1>Srishti Srivastava</h1>
+            <p class="subtitle">Senior Software Engineer</p>
             <div class="contact-links">
-                <a href="mailto:your.email@example.com">Email</a>
-                <a href="https://github.com/shri299" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://shri299.github.io/" target="_blank">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                    </svg>
+                    Portfolio
+                </a>
+                <a href="https://github.com/shri299" target="_blank">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:srishti.sri711@gmail.com">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    Email
+                </a>
+                <a href="tel:7022016971">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    Phone
+                </a>
             </div>
         </header>
 
         <section>
-            <h2>About</h2>
-            <p>B.E final year student currently looking for exciting and new opportunities. Would be happy to connect!</p>
+            <h2>Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>Senior Software Engineer</h3>
+                        <p class="company">Naukri.com</p>
+                    </div>
+                    <span class="date">Mar 2024 - Present</span>
+                </div>
+                <ul>
+                    <li>Redesigned a pipeline-based data porting system from StreamSets to an event-driven architecture using Kafka, cutting data loading time by 30% and improving maintainability</li>
+                    <li>Developed an Elasticsearch-based mistyped search handling system, achieving a 13% boost in search-to-response relevance through typo pattern analysis</li>
+                    <li>Implemented user engagement features including pseudo job listings and diversified search results, leading to measurable increase in user registrations</li>
+                    <li>Built a real-time fuzzy spell-check engine (Java, BK-Tree, Damerau-Levenshtein) reducing long-tail keyword generation by 70%</li>
+                    <li>Designed Kibana-based visualization dashboard to track and forecast user growth, delivering real-time insights for product decisions</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>Software Engineer</h3>
+                        <p class="company">Naukri.com</p>
+                    </div>
+                    <span class="date">Jun 2022 - Feb 2024</span>
+                </div>
+                <ul>
+                    <li>Migrated Suggester microservice from Node.js + Solr to Java Spring Boot + Elasticsearch, integrating Kafka for automated event-driven ingestion</li>
+                    <li>Refactored and migrated legacy PHP code to Java for three critical search microservices, improving performance, stability, and search relevance</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>SDE Intern</h3>
+                        <p class="company">Nokia</p>
+                    </div>
+                    <span class="date">Mar 2022 - May 2022</span>
+                </div>
+                <ul>
+                    <li>Gained hands-on experience in 5G networking architecture, protocols, and performance optimization through intensive technical training</li>
+                </ul>
+            </div>
         </section>
 
         <section>
             <h2>Projects</h2>
             
             <div class="project">
-                <h3>Netflix Clone</h3>
-                <p>A clone of the original Netflix landing page. A responsive website.</p>
-                <p class="tech-stack">HTML • CSS • JavaScript</p>
+                <div class="project-header">
+                    <h3>NutriSnap: AI Powered Food Recognition and Calorie Prediction</h3>
+                </div>
+                <ul>
+                    <li>Developed a web app using CNN and DenseNet models to classify food images and predict nutritional values</li>
+                    <li>Trained on 4,000 images per class with 80/20 split, integrated with Spring Boot, MySQL, and React</li>
+                    <li>Delivered accurate calorie predictions with real-time result display and user authentication</li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">DenseNet</span>
+                    <span class="tech-tag">Spring Boot</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">React</span>
+                </div>
             </div>
 
             <div class="project">
-                <h3>Salary Management System</h3>
-                <p>A fullstack application which calculates the net salary of an employee each month.</p>
-                <p class="tech-stack">HTML • CSS • JavaScript • Node.js • SQL</p>
-            </div>
-
-            <div class="project">
-                <h3>Attendance Management System</h3>
-                <p>An application which calculates and manages the attendance of students in colleges and universities.</p>
-                <p class="tech-stack">C++</p>
+                <div class="project-header">
+                    <h3>InsightLens: AI Powered Video Analytics and Summarization Platform</h3>
+                </div>
+                <ul>
+                    <li>Built platform to generate searchable transcripts, AI summaries, and key highlights using Vosk and BERT/T5 models</li>
+                    <li>Integrated Java Spring Boot backend, Elasticsearch semantic search, and AWS S3 storage for quick keyword-based navigation</li>
+                    <li>Reduced manual review time by 65%, improving accessibility and productivity</li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Vosk</span>
+                    <span class="tech-tag">BERT/T5</span>
+                    <span class="tech-tag">Spring Boot</span>
+                    <span class="tech-tag">Elasticsearch</span>
+                    <span class="tech-tag">AWS S3</span>
+                </div>
             </div>
         </section>
 
         <section>
-            <h2>Experience</h2>
-            
-            <div class="experience">
-                <h3>SDE Intern</h3>
-                <p>Worked as an SDE intern on a B2B ecommerce web application. Led the front end and database team.</p>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <p>Java, J2EE</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Frameworks</h4>
+                    <p>Spring Boot, Spring Framework</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Concepts</h4>
+                    <p>Data Structures, Algorithms, OOP, Microservices, Design Patterns, Distributed Systems, HLD, LLD</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Technologies</h4>
+                    <p>AWS, MySQL, Elasticsearch, Kibana, Grafana, Apache Kafka, Apache Solr, Aerospike, Git, Jenkins, CI/CD, Docker, Kubernetes, Jira, Nginx</p>
+                </div>
             </div>
+        </section>
 
-            <div class="experience">
-                <h3>SDE Intern - GRIP Rotational Program</h3>
-                <p>Made a simple banking transaction system.</p>
+        <section>
+            <h2>Education</h2>
+            <div class="education">
+                <div class="education-text">
+                    <h3>Bachelor of Technology</h3>
+                    <p>2018 - 2022</p>
+                </div>
             </div>
+        </section>
 
-            <div class="experience">
-                <h3>Open Source Developer - GirlScript Winter of Contribution</h3>
-                <p>Enhanced my skills by working as an open source developer.</p>
+        <section>
+            <h2>Achievements</h2>
+            <div class="achievements">
+                <div class="achievement">
+                    <span class="achievement-icon">🏆</span>
+                    <p><strong>Info Edge Merit Award Winner</strong> - 2024</p>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-icon">👥</span>
+                    <p><strong>Google Developer Students Club Lead</strong> - 2021-2022</p>
+                </div>
+                <div class="achievement">
+                    <span class="achievement-icon">💻</span>
+                    <p><strong>Open Source Mentee</strong> - Codeflow by BharatX, 2021</p>
+                </div>
             </div>
         </section>
     </div>
